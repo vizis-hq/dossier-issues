@@ -1,0 +1,58 @@
+name: Bug report
+description: Something in dossier doesn't work as expected
+labels: [bug]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: dossier version
+      description: Shown in Settings.
+      placeholder: "0.8.0"
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version
+      placeholder: "macOS 15.5 (Apple silicon)"
+    validations:
+      required: true
+  - type: dropdown
+    id: provider
+    attributes:
+      label: AI provider in use (if relevant)
+      options:
+        - Not AI-related
+        - Anthropic (Claude)
+        - OpenAI
+        - OpenRouter
+        - Ollama (local)
+        - No provider configured
+    validations:
+      required: false
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you do, what did you expect, what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Drop a scanned PDF into INBOX
+        2. Right-click INBOX → Auto File All…
+        3. …
+    validations:
+      required: false
+  - type: textarea
+    id: log
+    attributes:
+      label: Debug log
+      description: >
+        In dossier: Settings → Debug Log. Attach the file or paste the relevant
+        lines. The log contains no document contents.
+    validations:
+      required: false
