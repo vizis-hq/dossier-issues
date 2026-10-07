@@ -53,6 +53,7 @@ body:
       label: Debug log
       description: >
         In dossier: Settings → Debug Log. Attach the file or paste the relevant
-        lines. The log contains no document contents.
+        lines. The log contains no document contents, but error messages can
+        include file paths — remove any you would rather not share.
     validations:
       required: false
